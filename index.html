@@ -3,103 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Job Result Hub</title>
+<title>QuantPro Hub</title>
 
 <style>
-  body {
-    margin: 0;
-    font-family: Arial;
-    background: #f4f6f9;
-  }
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f4f6f9;
+}
 
-  header {
-    background: #b30000;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 26px;
-    font-weight: bold;
-  }
+/* HEADER */
+header {
+  background: #b30000;
+  color: white;
+  padding: 18px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
 
-  nav {
-    background: #222;
-    text-align: center;
-    padding: 10px;
-  }
+/* NAVBAR */
+nav {
+  background: #222;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  nav a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-    font-size: 14px;
-  }
+nav a {
+  color: white;
+  padding: 12px 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-  .highlight {
-    background: yellow;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-  }
+nav a:hover {
+  background: #b30000;
+}
 
-  .container {
-    width: 90%;
-    margin: auto;
-    padding: 15px;
-  }
+/* SECTION */
+section {
+  display: none;
+  padding: 20px;
+}
 
-  .box {
-    background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-left: 6px solid #b30000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
+.active {
+  display: block;
+}
 
-  .box h3 {
-    margin: 0;
-    color: #b30000;
-  }
+/* BOX STYLE */
+.box {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 6px solid #b30000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-  .btn {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 6px 12px;
-    background: #b30000;
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
-    border-radius: 4px;
-  }
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: #b30000;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 4px;
+}
 
-  /* PDF SECTION */
-  .pdf-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-  }
+/* PDF GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
 
-  .pdf-box {
-    background: white;
-    padding: 15px;
-    border-top: 5px solid #b30000;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
+.card {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-top: 5px solid #b30000;
+}
 
-  .pdf-box h3 {
-    color: #b30000;
-    margin-bottom: 10px;
-  }
-
-  footer {
-    text-align: center;
-    padding: 15px;
-    background: #222;
-    color: white;
-    margin-top: 20px;
-    font-size: 13px;
-  }
-
+/* FOOTER */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 13px;
+}
 </style>
 
 </head>
@@ -107,72 +101,123 @@
 <body>
 
 <header>
-  Job Result Hub 📚
+  QuantPro Hub 🚀
 </header>
 
+<!-- NAVIGATION -->
 <nav>
-  <a href="#">Home</a>
-  <a href="#">Latest Jobs</a>
-  <a href="#">Admit Card</a>
-  <a href="#">Result</a>
-  <a href="#">Syllabus</a>
-  <a href="#">PDF</a>
+  <a onclick="show('home')">Home</a>
+  <a onclick="show('jobs')">Jobs</a>
+  <a onclick="show('admit')">Admit Card</a>
+  <a onclick="show('result')">Result</a>
+  <a onclick="show('pdf')">PDF</a>
+  <a onclick="show('contact')">Contact</a>
 </nav>
 
-<div class="highlight">
-  🔥 Latest Updates: SSC | Railway | Bank | Police Jobs 2026
-</div>
+<!-- HOME -->
+<section id="home" class="active">
+  <h2>🔥 Latest Updates</h2>
 
-<div class="container">
-
-  <!-- JOB BOXES -->
   <div class="box">
-    <h3>SSC CGL Recruitment 2026</h3>
-    <a href="#" class="btn">Apply Now</a>
+    SSC CGL 2026 Notification Out
   </div>
 
   <div class="box">
-    <h3>Railway Group D Vacancy</h3>
-    <a href="#" class="btn">Details</a>
+    Railway Group D Vacancy Coming Soon
   </div>
 
   <div class="box">
-    <h3>UP Police Result</h3>
-    <a href="#" class="btn">Check Result</a>
+    Bank PO Exam Strategy Released
+  </div>
+</section>
+
+<!-- JOBS -->
+<section id="jobs">
+  <h2>💼 Latest Jobs</h2>
+
+  <div class="box">
+    SSC CGL Recruitment
+    <br><a class="btn">Apply Now</a>
   </div>
 
-  <hr>
+  <div class="box">
+    Railway Vacancy
+    <br><a class="btn">Details</a>
+  </div>
+</section>
 
-  <!-- 📚 PDF SECTION -->
-  <h2 style="color:#b30000; text-align:center;">📚 Study PDFs</h2>
+<!-- ADMIT CARD -->
+<section id="admit">
+  <h2>🎫 Admit Card</h2>
 
-  <div class="pdf-section">
+  <div class="box">
+    SSC Admit Card
+    <a class="btn">Download</a>
+  </div>
+</section>
 
-    <div class="pdf-box">
-      <h3>📘 Quant PDF</h3>
-      <p>Maths Short Tricks & Practice</p>
-      <a href="#" class="btn">Download</a>
+<!-- RESULT -->
+<section id="result">
+  <h2>📊 Results</h2>
+
+  <div class="box">
+    UP Police Result
+    <a class="btn">Check</a>
+  </div>
+</section>
+
+<!-- PDF -->
+<section id="pdf">
+  <h2>📚 Study PDFs</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Quant PDF</h3>
+      <p>Math Tricks & Practice</p>
+      <a class="btn">Download</a>
     </div>
 
-    <div class="pdf-box">
-      <h3>🧠 Reasoning PDF</h3>
-      <p>Important Questions & Solutions</p>
-      <a href="#" class="btn">Download</a>
+    <div class="card">
+      <h3>Reasoning PDF</h3>
+      <p>Important Questions</p>
+      <a class="btn">Download</a>
     </div>
 
-    <div class="pdf-box">
-      <h3>🌍 GA PDF</h3>
+    <div class="card">
+      <h3>GA PDF</h3>
       <p>General Awareness Notes</p>
-      <a href="#" class="btn">Download</a>
+      <a class="btn">Download</a>
     </div>
 
   </div>
+</section>
 
-</div>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>📞 Contact Us</h2>
 
+  <div class="box">
+    Email: support@quantprohub.com
+  </div>
+
+  <div class="box">
+    WhatsApp: +91-XXXXXXXXXX
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  © 2026 Job Result Hub | All Rights Reserved
+  © 2026 QuantPro Hub | All Rights Reserved
 </footer>
 
+<script>
+function show(id){
+  let sections = document.querySelectorAll("section");
+  sections.forEach(sec => sec.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+</script>
+
 </body>
-      </html>
+</html>

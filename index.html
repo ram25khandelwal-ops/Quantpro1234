@@ -3,96 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QuantPro Hub</title>
+<title>Result Portal</title>
 
 <style>
-body {
-  margin: 0;
+body{
+  margin:0;
   font-family: Arial;
-  background: #f4f6f9;
+  background:#f2f2f2;
 }
 
-/* HEADER */
-header {
-  background: #b30000;
-  color: white;
-  padding: 18px;
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
+/* TOP BAR */
+.topbar{
+  background:#b30000;
+  color:white;
+  text-align:center;
+  padding:18px;
+  font-size:28px;
+  font-weight:bold;
+  letter-spacing:1px;
 }
 
-/* NAVBAR */
-nav {
-  background: #222;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+/* MENU */
+.menu{
+  background:#111;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
-nav a {
-  color: white;
-  padding: 12px 15px;
-  text-decoration: none;
-  font-size: 14px;
+.menu a{
+  color:white;
+  padding:12px 15px;
+  text-decoration:none;
+  font-size:14px;
 }
 
-nav a:hover {
-  background: #b30000;
+.menu a:hover{
+  background:#b30000;
 }
 
-/* SECTION */
-section {
-  display: none;
-  padding: 20px;
+/* MARQUEE */
+.notice{
+  background:yellow;
+  padding:8px;
+  font-weight:bold;
 }
 
-.active {
-  display: block;
+/* MAIN BOX */
+.container{
+  width:92%;
+  margin:auto;
+  padding:10px;
 }
 
-/* BOX STYLE */
-.box {
-  background: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-left: 6px solid #b30000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.card{
+  background:white;
+  padding:12px;
+  margin:10px 0;
+  border-left:6px solid #b30000;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 6px 12px;
-  background: #b30000;
-  color: white;
-  text-decoration: none;
-  font-size: 13px;
-  border-radius: 4px;
+.card h3{
+  margin:0;
+  color:#b30000;
+  font-size:16px;
 }
 
-/* PDF GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 10px;
+.btn{
+  display:inline-block;
+  margin-top:8px;
+  padding:6px 10px;
+  background:#b30000;
+  color:white;
+  font-size:12px;
+  text-decoration:none;
+  border-radius:4px;
 }
 
-.card {
-  background: white;
-  padding: 15px;
-  text-align: center;
-  border-top: 5px solid #b30000;
+/* GRID PDF */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:10px;
+}
+
+.pdf{
+  background:white;
+  text-align:center;
+  padding:15px;
+  border-top:5px solid #b30000;
 }
 
 /* FOOTER */
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-  font-size: 13px;
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:12px;
+  margin-top:20px;
+  font-size:13px;
 }
 </style>
 
@@ -100,124 +110,75 @@ footer {
 
 <body>
 
-<header>
-  QuantPro Hub 🚀
-</header>
+<div class="topbar">
+Result Portal
+</div>
 
-<!-- NAVIGATION -->
-<nav>
-  <a onclick="show('home')">Home</a>
-  <a onclick="show('jobs')">Jobs</a>
-  <a onclick="show('admit')">Admit Card</a>
-  <a onclick="show('result')">Result</a>
-  <a onclick="show('pdf')">PDF</a>
-  <a onclick="show('contact')">Contact</a>
-</nav>
+<div class="menu">
+<a href="#">Home</a>
+<a href="#">Latest Jobs</a>
+<a href="#">Admit Card</a>
+<a href="#">Result</a>
+<a href="#">Syllabus</a>
+<a href="#">PDF</a>
+</div>
 
-<!-- HOME -->
-<section id="home" class="active">
-  <h2>🔥 Latest Updates</h2>
+<div class="notice">
+🔥 Breaking News: SSC | Railway | Bank | Police Latest Updates 2026
+</div>
 
-  <div class="box">
-    SSC CGL 2026 Notification Out
-  </div>
-
-  <div class="box">
-    Railway Group D Vacancy Coming Soon
-  </div>
-
-  <div class="box">
-    Bank PO Exam Strategy Released
-  </div>
-</section>
+<div class="container">
 
 <!-- JOBS -->
-<section id="jobs">
-  <h2>💼 Latest Jobs</h2>
+<div class="card">
+<h3>SSC CGL 2026 Notification</h3>
+Apply Online for Various Posts<br>
+<a class="btn">Apply Now</a>
+</div>
 
-  <div class="box">
-    SSC CGL Recruitment
-    <br><a class="btn">Apply Now</a>
-  </div>
+<div class="card">
+<h3>Railway Group D Vacancy</h3>
+Online Form Start Soon<br>
+<a class="btn">Details</a>
+</div>
 
-  <div class="box">
-    Railway Vacancy
-    <br><a class="btn">Details</a>
-  </div>
-</section>
+<div class="card">
+<h3>UP Police Result 2026</h3>
+Result Available Now<br>
+<a class="btn">Check Result</a>
+</div>
 
-<!-- ADMIT CARD -->
-<section id="admit">
-  <h2>🎫 Admit Card</h2>
+<hr>
 
-  <div class="box">
-    SSC Admit Card
-    <a class="btn">Download</a>
-  </div>
-</section>
+<h2 style="color:#b30000;text-align:center;">📚 Study Material</h2>
 
-<!-- RESULT -->
-<section id="result">
-  <h2>📊 Results</h2>
+<div class="grid">
 
-  <div class="box">
-    UP Police Result
-    <a class="btn">Check</a>
-  </div>
-</section>
+<div class="pdf">
+<h3>Quant PDF</h3>
+<p>Math Tricks + Practice</p>
+<a class="btn">Download</a>
+</div>
 
-<!-- PDF -->
-<section id="pdf">
-  <h2>📚 Study PDFs</h2>
+<div class="pdf">
+<h3>Reasoning PDF</h3>
+<p>Important Questions</p>
+<a class="btn">Download</a>
+</div>
 
-  <div class="grid">
+<div class="pdf">
+<h3>GA PDF</h3>
+<p>General Awareness</p>
+<a class="btn">Download</a>
+</div>
 
-    <div class="card">
-      <h3>Quant PDF</h3>
-      <p>Math Tricks & Practice</p>
-      <a class="btn">Download</a>
-    </div>
+</div>
 
-    <div class="card">
-      <h3>Reasoning PDF</h3>
-      <p>Important Questions</p>
-      <a class="btn">Download</a>
-    </div>
+</div>
 
-    <div class="card">
-      <h3>GA PDF</h3>
-      <p>General Awareness Notes</p>
-      <a class="btn">Download</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>📞 Contact Us</h2>
-
-  <div class="box">
-    Email: support@quantprohub.com
-  </div>
-
-  <div class="box">
-    WhatsApp: +91-XXXXXXXXXX
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  © 2026 QuantPro Hub | All Rights Reserved
+© 2026 Result Portal | All Rights Reserved
 </footer>
-
-<script>
-function show(id){
-  let sections = document.querySelectorAll("section");
-  sections.forEach(sec => sec.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
-}
-</script>
 
 </body>
 </html>
